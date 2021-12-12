@@ -71,3 +71,39 @@ Step 6: Print the total cost of the spanning tree.
 
 6. Finally when all the vertices have been visited, the algorithm terminate.
 ```
+
+### Kruskal's Minimum Spanning Tree Algorithm
+
+#### Logical Explanation
+```text
+Kruskal's algorithm is a minimum spanning tree algorithm that takes a graph as input and finds the subset of the edges of that graph which
+    1. form a tree that includes every vertex
+    
+    2. has the minimum sum of weights among all the trees that can be formed from the graph
+
+It falls under a class of algorithms called greedy algorithms that find the local optimum in the hopes of finding a global optimum. We start from the edges with the lowest weight and keep adding edges until we reach our goal. The steps for implementing Kruskal's algorithm are as follows:
+    1. Sort all the edges from low weight to high
+
+    2. Take the edge with the lowest weight and add it to the spanning tree. 
+
+    3. If adding the edge created a cycle, then reject this edge.
+
+    4. Keep adding edges until we reach all vertices.
+
+Any minimum spanning tree algorithm revolves around checking if adding an edge creates a loop or not. The most common way to find this out is an algorithm called Union FInd. The Union-Find algorithm divides the vertices into clusters and allows us to check if two vertices belong to the same cluster or not and hence decide whether adding an edge creates a cycle.
+```
+
+#### Algorithm breakdown
+```text
+Step1: Start with a weighted graph
+
+Step2: Choose the edge with the least weight, if there are more than 1, choose anyone
+
+Step3: Choose the next shortest edge and add it
+
+Step4: Choose the next shortest edge that doesn't create a cycle and add it
+
+Step5: Choose the next shortest edge that doesn't create a cycle and add it
+
+Step6: Repeat until you have a spanning tree
+```
