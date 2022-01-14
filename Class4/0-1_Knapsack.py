@@ -1,7 +1,7 @@
 # breakdown
 # row of table corresponding to item from 0 to items
-    # column of table corresponding to weight limit from 0 to Capacity
-    # index of very last cell is [item][capacity]
+# column of table corresponding to weight limit from 0 to Capacity
+# index of very last cell is [item][capacity]
 
     # [i][j] represents the maximum profit possible i as items and j as total weight limit
 
@@ -14,7 +14,6 @@
             # weight limit after including object [i] !> weight limit
             # profit after including object [i] > to before including
         # don't include object [i]
-
 
 def knapSack(capacity, weights, values): 
     items=len(values)
